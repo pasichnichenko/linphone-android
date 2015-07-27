@@ -30,6 +30,7 @@ PACKAGE_NAME=$(shell sed -nE 's|<property name="linphone.package.name" value="(.
 
 ifeq ($(ENABLE_GPL_THIRD_PARTIES),1)
 BUILD_G729=1
+BUILD_X264=0
 else
 #x264 and g729 requires additional licensing agreements.
 BUILD_X264=0
@@ -38,7 +39,7 @@ endif
 
 NDK_DEBUG=0
 BUILD_VIDEO=1
-BUILD_OPENH264=1
+BUILD_OPENH264=0
 BUILD_NON_FREE_CODECS=1
 ENABLE_OPENH264_DECODER=1
 BUILD_UPNP=1
