@@ -30,6 +30,7 @@ PACKAGE_NAME=$(shell sed -nE 's|<property name="linphone.package.name" value="(.
 
 ifeq ($(ENABLE_GPL_THIRD_PARTIES),1)
 BUILD_G729=1
+BUILD_X264=0
 else
 #x264 and g729 requires additional licensing agreements.
 BUILD_X264=0
@@ -38,7 +39,7 @@ endif
 
 NDK_DEBUG=0
 BUILD_VIDEO=1
-BUILD_OPENH264=1
+BUILD_OPENH264=0
 BUILD_NON_FREE_CODECS=1
 ENABLE_OPENH264_DECODER=1
 BUILD_UPNP=1
@@ -433,6 +434,7 @@ MEDIASTREAMER2_OPTIONS = $(GENERATE_OPTIONS) BUILD_MEDIASTREAMER2_SDK=1
 
 generate-libs: prepare-sources javah
 	$(NDK_PATH)/ndk-build $(LIBLINPHONE_OPTIONS) -j$(NUMCPUS) TARGET_PLATFORM=$(NDKBUILD_TARGET)
+	./bsed.sh # Fix path to libffmpeg library in linphone.so because of Android M Preview issue: https://code.google.com/p/android-developer-preview/issues/detail?id=2239
 
 generate-mediastreamer2-libs: prepare-sources
 	@cd $(TOPDIR)/submodules/linphone/mediastreamer2/java && \

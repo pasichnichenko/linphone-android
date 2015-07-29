@@ -7,19 +7,19 @@
 	<bool name="enable_push_id">true</bool>
 	<string name="push_sender_id">622464153529</string>
 
-	<string name="default_domain">sip.linphone.org</string>
-	<string name="default_stun">stun.linphone.org</string>
+	<string name="default_domain">vpbx.mcn.ru</string>
+	<string name="default_stun">stun.mcn.ru</string>
 	<bool name="override_domain_using_default_one">false</bool> <!-- Replace the domain for outgoing calls by the one above -->
-	<string name="wizard_url">https://www.linphone.org/wizard.php</string>
+	<string name="wizard_url">https://www.mcn.ru/vpbx-wizard.php</string>
 
 	<!-- Interface settings -->
     <bool name="use_simple_history">true</bool>
     <bool name="replace_settings_by_about">false</bool>
-    <bool name="replace_chat_by_about">false</bool>
+    <bool name="replace_chat_by_about">true</bool>
     <bool name="display_about_in_settings">true</bool>
-    <bool name="exit_button_on_dialer">false</bool>
+    <bool name="exit_button_on_dialer">true</bool>
 
-    <bool name="hide_camera_settings">false</bool>
+    <bool name="hide_camera_settings">true</bool>
     <bool name="replace_wizard_with_old_interface">false</bool>
     <bool name="hide_wizard">false</bool>
     <string name="setup_forced_proxy"></string>
@@ -64,8 +64,8 @@
 	<bool name="allow_ringing_while_early_media">true</bool>
 	<bool name="allow_transfers">true</bool>
 	<bool name="allow_edit_in_dialer">true</bool>
-	<bool name="forbid_self_call">false</bool>
-	<bool name="disable_chat">false</bool>
+	<bool name="forbid_self_call">true</bool>
+	<bool name="disable_chat">true</bool>
 	<bool name="disable_chat__message_notification">false</bool>
 	<bool name="disable_chat_send_file">false</bool>
 	<bool name="use_linphone_chat_storage">true</bool>
@@ -73,7 +73,6 @@
 	<bool name="intercept_outgoing_gsm_calls">false</bool>
 	<bool name="automatically_start_intercepted_outgoing_gsm_call">true</bool>
 	<bool name="use_linphonecore_ringing">false</bool>
-
 	<!-- This settings handle the behavior of the view waiting for the remote provisioning configuration to be done -->
 	<bool name="display_sms_remote_provisioning_activity">false</bool>
 	<bool name="forbid_app_usage_until_remote_provisioning_completed">false</bool>
@@ -84,12 +83,13 @@
 	<bool name="enable_log_collect">false</bool>
 	<bool name="disable_every_log">false</bool>
 	<bool name="disable_all_security_features_for_markets">false</bool> <!-- Disable TLS/SRTP/ZRTP -->
-	<bool name="disable_all_patented_codecs_for_markets">false</bool> <!-- Disable MPEG4/H264 -->
+	<bool name="disable_all_patented_codecs_for_markets">true</bool> <!-- Disable MPEG4/H264 -->
 
-	<string name="about_bugreport_email">linphone-android@belledonne-communications.com</string>
+	<string name="about_bugreport_email">mcn-vpbx@mcn.ru</string>
 	<string name="temp_photo_name">linphone-android-photo-temp.jpg</string>
 	<string name="temp_photo_name_with_date">linphone-android-photo-%s.jpg</string>
 
 	<bool name="enable_call_notification">true</bool>
+	<bool name="kill_service_with_task_manager">true</bool>
 </resources>
 
